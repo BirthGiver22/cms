@@ -113,6 +113,22 @@ export interface HomepageOtherServices extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageReadyToGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_ready_to_get_started_s';
+  info: {
+    displayName: 'Ready to Get Started?';
+  };
+  attributes: {
+    call: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    discrete: Schema.Attribute.String;
+    quote: Schema.Attribute.Component<'elements.link', false>;
+    response: Schema.Attribute.String;
+    support: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageService extends Struct.ComponentSchema {
   collectionName: 'components_homepage_services';
   info: {
@@ -192,6 +208,7 @@ declare module '@strapi/strapi' {
       'elements.tetimonials': ElementsTetimonials;
       'homepage.collaborations': HomepageCollaborations;
       'homepage.other-services': HomepageOtherServices;
+      'homepage.ready-to-get-started': HomepageReadyToGetStarted;
       'homepage.service': HomepageService;
       'homepage.spectrum': HomepageSpectrum;
       'homepage.testimonials': HomepageTestimonials;

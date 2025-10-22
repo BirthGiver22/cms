@@ -478,6 +478,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
         'homepage.other-services',
         'homepage.testimonials',
         'homepage.collaborations',
+        'homepage.ready-to-get-started',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

@@ -19,7 +19,8 @@
         "homepage.service",
         "homepage.other-services",
         "homepage.testimonials",
-        "homepage.collaborations"
+        "homepage.collaborations",
+        "homepage.ready-to-get-started"
       ]
     }
   }
