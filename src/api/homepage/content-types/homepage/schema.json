@@ -14,7 +14,12 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "blocks.hero-section"
+        "blocks.hero-section",
+        "homepage.spectrum",
+        "homepage.service",
+        "homepage.other-services",
+        "homepage.testimonials",
+        "homepage.collaborations"
       ]
     }
   }

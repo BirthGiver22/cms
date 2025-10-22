@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_tetimonials",
+  "info": {
+    "displayName": "tetimonials"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "starCount": {
+      "type": "string"
+    },
+    "feedback": {
+      "type": "richtext"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

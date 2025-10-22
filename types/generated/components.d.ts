@@ -60,6 +60,46 @@ export interface ElementsLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsNumbers extends Struct.ComponentSchema {
+  collectionName: 'components_elements_numbers';
+  info: {
+    displayName: 'Numbers';
+  };
+  attributes: {
+    number: Schema.Attribute.String;
+    subtitleOne: Schema.Attribute.String;
+    subtitleTwo: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsTetimonials extends Struct.ComponentSchema {
+  collectionName: 'components_elements_tetimonials';
+  info: {
+    displayName: 'tetimonials';
+  };
+  attributes: {
+    feedback: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String;
+    starCount: Schema.Attribute.String;
+  };
+}
+
+export interface HomepageCollaborations extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_collaborations';
+  info: {
+    displayName: 'Collaborations';
+  };
+  attributes: {
+    brands: Schema.Attribute.Media<'images', true>;
+    brandsTitle: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    numbers: Schema.Attribute.Component<'elements.numbers', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageOtherServices extends Struct.ComponentSchema {
   collectionName: 'components_homepage_other_services';
   info: {
@@ -104,6 +144,18 @@ export interface HomepageSpectrum extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageTestimonials extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_testimonials';
+  info: {
+    displayName: 'Testimonials';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    testimonials: Schema.Attribute.Component<'elements.tetimonials', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedCta extends Struct.ComponentSchema {
   collectionName: 'components_shared_ctas';
   info: {
@@ -136,9 +188,13 @@ declare module '@strapi/strapi' {
       'elements.card': ElementsCard;
       'elements.cta-cards': ElementsCtaCards;
       'elements.link': ElementsLink;
+      'elements.numbers': ElementsNumbers;
+      'elements.tetimonials': ElementsTetimonials;
+      'homepage.collaborations': HomepageCollaborations;
       'homepage.other-services': HomepageOtherServices;
       'homepage.service': HomepageService;
       'homepage.spectrum': HomepageSpectrum;
+      'homepage.testimonials': HomepageTestimonials;
       'shared.cta': SharedCta;
       'shared.header': SharedHeader;
     }
