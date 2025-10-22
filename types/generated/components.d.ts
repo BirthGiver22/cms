@@ -1,5 +1,63 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_about_features';
+  info: {
+    displayName: 'Features';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.card', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutMembers extends Struct.ComponentSchema {
+  collectionName: 'components_about_members';
+  info: {
+    displayName: 'Members';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.Text;
+    skills: Schema.Attribute.Component<'elements.link', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlocksAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_about_uses';
+  info: {
+    displayName: 'About us';
+  };
+  attributes: {
+    collaborate: Schema.Attribute.Text;
+    collaborate_desc: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'about.features', false>;
+    herosection: Schema.Attribute.Component<'shared.hero-section', false>;
+    highlights: Schema.Attribute.Component<'elements.card', true>;
+    members: Schema.Attribute.Component<'about.members', true>;
+    mission: Schema.Attribute.Component<'elements.card', false>;
+    ourStory: Schema.Attribute.Component<'elements.card', false>;
+    vision: Schema.Attribute.Component<'elements.card', false>;
+  };
+}
+
+export interface BlocksCareers extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_careers';
+  info: {
+    displayName: 'Careers';
+  };
+  attributes: {
+    apply: Schema.Attribute.Component<'career.gain', false>;
+    culture: Schema.Attribute.Component<'career.culture', false>;
+    gain: Schema.Attribute.Component<'career.gain', false>;
+    herosection: Schema.Attribute.Component<'shared.hero-section', false>;
+    internship: Schema.Attribute.Component<'career.internship', false>;
+  };
+}
+
 export interface BlocksHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_hero_sections';
   info: {
@@ -9,6 +67,80 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.Text;
     video: Schema.Attribute.Media<'videos'>;
+  };
+}
+
+export interface BlocksProjects extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_projects';
+  info: {
+    displayName: 'Projects';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    herosection: Schema.Attribute.Component<'shared.hero-section', false>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface BlocksService extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_services';
+  info: {
+    displayName: 'Service';
+  };
+  attributes: {
+    services: Schema.Attribute.Component<'servicepage.services', true>;
+  };
+}
+
+export interface CareerCulture extends Struct.ComponentSchema {
+  collectionName: 'components_career_cultures';
+  info: {
+    displayName: 'Culture';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.card', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface CareerGain extends Struct.ComponentSchema {
+  collectionName: 'components_career_gains';
+  info: {
+    displayName: 'gain';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.card', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface CareerInternship extends Struct.ComponentSchema {
+  collectionName: 'components_career_internships';
+  info: {
+    displayName: 'Internship';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    jobs: Schema.Attribute.Component<'career.jobs', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface CareerJobs extends Struct.ComponentSchema {
+  collectionName: 'components_career_jobs';
+  info: {
+    displayName: 'jobs';
+  };
+  attributes: {
+    benefits: Schema.Attribute.RichText;
+    button: Schema.Attribute.Component<'elements.link', false>;
+    job_description: Schema.Attribute.Text;
+    place: Schema.Attribute.Text;
+    requirements: Schema.Attribute.RichText;
+    tags: Schema.Attribute.Component<'shared.tags', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -172,6 +304,20 @@ export interface HomepageTestimonials extends Struct.ComponentSchema {
   };
 }
 
+export interface ServicepageServices extends Struct.ComponentSchema {
+  collectionName: 'components_servicepage_services';
+  info: {
+    displayName: 'Services';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    href: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    subServices: Schema.Attribute.Component<'elements.card', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedCta extends Struct.ComponentSchema {
   collectionName: 'components_shared_ctas';
   info: {
@@ -196,10 +342,43 @@ export interface SharedHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    tags: Schema.Attribute.Component<'elements.link', true>;
+    title: Schema.Attribute.Text;
+    video: Schema.Attribute.Media<'videos'>;
+  };
+}
+
+export interface SharedTags extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tags';
+  info: {
+    displayName: 'Tags';
+  };
+  attributes: {
+    title: Schema.Attribute.Text;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about.features': AboutFeatures;
+      'about.members': AboutMembers;
+      'blocks.about-us': BlocksAboutUs;
+      'blocks.careers': BlocksCareers;
       'blocks.hero-section': BlocksHeroSection;
+      'blocks.projects': BlocksProjects;
+      'blocks.service': BlocksService;
+      'career.culture': CareerCulture;
+      'career.gain': CareerGain;
+      'career.internship': CareerInternship;
+      'career.jobs': CareerJobs;
       'elements.block': ElementsBlock;
       'elements.card': ElementsCard;
       'elements.cta-cards': ElementsCtaCards;
@@ -212,8 +391,11 @@ declare module '@strapi/strapi' {
       'homepage.service': HomepageService;
       'homepage.spectrum': HomepageSpectrum;
       'homepage.testimonials': HomepageTestimonials;
+      'servicepage.services': ServicepageServices;
       'shared.cta': SharedCta;
       'shared.header': SharedHeader;
+      'shared.hero-section': SharedHeroSection;
+      'shared.tags': SharedTags;
     }
   }
 }

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_career_internships",
+  "info": {
+    "displayName": "Internship"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "jobs": {
+      "type": "component",
+      "component": "career.jobs",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

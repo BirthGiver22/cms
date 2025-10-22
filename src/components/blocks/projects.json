@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_projects",
+  "info": {
+    "displayName": "Projects"
+  },
+  "options": {},
+  "attributes": {
+    "herosection": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

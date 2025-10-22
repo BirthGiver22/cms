@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_careers",
+  "info": {
+    "displayName": "Careers"
+  },
+  "options": {},
+  "attributes": {
+    "herosection": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false
+    },
+    "culture": {
+      "type": "component",
+      "component": "career.culture",
+      "repeatable": false
+    },
+    "internship": {
+      "type": "component",
+      "component": "career.internship",
+      "repeatable": false
+    },
+    "gain": {
+      "type": "component",
+      "component": "career.gain",
+      "repeatable": false
+    },
+    "apply": {
+      "type": "component",
+      "component": "career.gain",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

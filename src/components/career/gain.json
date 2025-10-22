@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_career_gains",
+  "info": {
+    "displayName": "gain"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "elements.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_career_jobs",
+  "info": {
+    "displayName": "jobs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "component": "shared.tags",
+      "repeatable": true
+    },
+    "place": {
+      "type": "text"
+    },
+    "job_description": {
+      "type": "text"
+    },
+    "requirements": {
+      "type": "richtext"
+    },
+    "benefits": {
+      "type": "richtext"
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
