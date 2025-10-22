@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_ctas",
+  "info": {
+    "displayName": "CTA"
+  },
+  "options": {},
+  "attributes": {
+    "card": {
+      "type": "component",
+      "component": "elements.cta-cards",
+      "repeatable": true
+    },
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

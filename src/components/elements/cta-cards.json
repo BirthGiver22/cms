@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_elements_cta_cards",
+  "info": {
+    "displayName": "Cta Cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "link": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

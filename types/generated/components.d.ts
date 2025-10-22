@@ -1,0 +1,146 @@
+import type { Schema, Struct } from '@strapi/strapi';
+
+export interface BlocksHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+    video: Schema.Attribute.Media<'videos'>;
+  };
+}
+
+export interface ElementsBlock extends Struct.ComponentSchema {
+  collectionName: 'components_elements_blocks';
+  info: {
+    displayName: 'block';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface ElementsCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_cards';
+  info: {
+    displayName: 'Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.Component<'elements.link', false>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface ElementsCtaCards extends Struct.ComponentSchema {
+  collectionName: 'components_elements_cta_cards';
+  info: {
+    displayName: 'Cta Cards';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.Component<'elements.link', false>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface ElementsLink extends Struct.ComponentSchema {
+  collectionName: 'components_elements_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+  };
+}
+
+export interface HomepageOtherServices extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_other_services';
+  info: {
+    displayName: 'Other Services';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.card', true>;
+    description: Schema.Attribute.Text;
+    link: Schema.Attribute.Component<'elements.link', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomepageService extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_services';
+  info: {
+    displayName: 'Service';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.card', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface HomepageSpectrum extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_spectrums';
+  info: {
+    displayName: 'Spectrum';
+  };
+  attributes: {
+    ans1: Schema.Attribute.String;
+    ans2: Schema.Attribute.Text;
+    link: Schema.Attribute.Component<'elements.link', false>;
+    ques1: Schema.Attribute.String;
+    ques2: Schema.Attribute.String;
+    right_block: Schema.Attribute.Component<'elements.block', true>;
+    right_description: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.Text;
+    subtitle2: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+    title2: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedCta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_ctas';
+  info: {
+    displayName: 'CTA';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'elements.cta-cards', true>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedHeader extends Struct.ComponentSchema {
+  collectionName: 'components_shared_headers';
+  info: {
+    displayName: 'Header';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    link: Schema.Attribute.Component<'elements.link', true>;
+    logo: Schema.Attribute.Media<'images'>;
+  };
+}
+
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
+      'blocks.hero-section': BlocksHeroSection;
+      'elements.block': ElementsBlock;
+      'elements.card': ElementsCard;
+      'elements.cta-cards': ElementsCtaCards;
+      'elements.link': ElementsLink;
+      'homepage.other-services': HomepageOtherServices;
+      'homepage.service': HomepageService;
+      'homepage.spectrum': HomepageSpectrum;
+      'shared.cta': SharedCta;
+      'shared.header': SharedHeader;
+    }
+  }
+}
