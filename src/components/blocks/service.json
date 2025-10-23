@@ -9,6 +9,11 @@
       "type": "component",
       "component": "servicepage.services",
       "repeatable": true
+    },
+    "herosection": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false
     }
   },
   "config": {}

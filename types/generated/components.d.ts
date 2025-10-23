@@ -88,6 +88,7 @@ export interface BlocksService extends Struct.ComponentSchema {
     displayName: 'Service';
   };
   attributes: {
+    herosection: Schema.Attribute.Component<'shared.hero-section', false>;
     services: Schema.Attribute.Component<'servicepage.services', true>;
   };
 }
