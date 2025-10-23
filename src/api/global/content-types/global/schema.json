@@ -20,6 +20,11 @@
       "type": "component",
       "component": "shared.cta",
       "repeatable": true
+    },
+    "footer": {
+      "type": "component",
+      "component": "shared.footer",
+      "repeatable": false
     }
   }
 }
