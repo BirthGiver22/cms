@@ -58,6 +58,17 @@ export interface BlocksCareers extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksFilm extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_films';
+  info: {
+    displayName: 'Film';
+  };
+  attributes: {
+    herosection: Schema.Attribute.Component<'shared.hero-section', false>;
+    services: Schema.Attribute.Component<'film.services', true>;
+  };
+}
+
 export interface BlocksHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_hero_sections';
   info: {
@@ -90,6 +101,19 @@ export interface BlocksService extends Struct.ComponentSchema {
   attributes: {
     herosection: Schema.Attribute.Component<'shared.hero-section', false>;
     services: Schema.Attribute.Component<'servicepage.services', true>;
+  };
+}
+
+export interface BlocksSoftware extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_software';
+  info: {
+    displayName: 'Software';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    herosection: Schema.Attribute.Component<'shared.hero-section', false>;
+    services: Schema.Attribute.Component<'film.services', true>;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -215,6 +239,18 @@ export interface ElementsTetimonials extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     name: Schema.Attribute.String;
     starCount: Schema.Attribute.String;
+  };
+}
+
+export interface FilmServices extends Struct.ComponentSchema {
+  collectionName: 'components_film_services';
+  info: {
+    displayName: 'Services';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -434,9 +470,11 @@ declare module '@strapi/strapi' {
       'about.members': AboutMembers;
       'blocks.about-us': BlocksAboutUs;
       'blocks.careers': BlocksCareers;
+      'blocks.film': BlocksFilm;
       'blocks.hero-section': BlocksHeroSection;
       'blocks.projects': BlocksProjects;
       'blocks.service': BlocksService;
+      'blocks.software': BlocksSoftware;
       'career.culture': CareerCulture;
       'career.gain': CareerGain;
       'career.internship': CareerInternship;
@@ -447,6 +485,7 @@ declare module '@strapi/strapi' {
       'elements.link': ElementsLink;
       'elements.numbers': ElementsNumbers;
       'elements.tetimonials': ElementsTetimonials;
+      'film.services': FilmServices;
       'footer.stay-in-the-loop': FooterStayInTheLoop;
       'homepage.collaborations': HomepageCollaborations;
       'homepage.other-services': HomepageOtherServices;
