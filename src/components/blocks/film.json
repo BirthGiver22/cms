@@ -14,6 +14,12 @@
       "type": "component",
       "component": "film.services",
       "repeatable": true
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
     }
   },
   "config": {}

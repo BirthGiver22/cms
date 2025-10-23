@@ -64,8 +64,10 @@ export interface BlocksFilm extends Struct.ComponentSchema {
     displayName: 'Film';
   };
   attributes: {
+    description: Schema.Attribute.Text;
     herosection: Schema.Attribute.Component<'shared.hero-section', false>;
     services: Schema.Attribute.Component<'film.services', true>;
+    title: Schema.Attribute.Text;
   };
 }
 
