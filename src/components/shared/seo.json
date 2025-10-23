@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "seo"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "metaImage": {
+      "type": "text"
+    },
+    "socialNetwork": {
+      "type": "component",
+      "component": "shared.open-graph",
+      "repeatable": true
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "metaRobots": {
+      "type": "text"
+    },
+    "metaViewport": {
+      "type": "text"
+    },
+    "canonicalURL": {
+      "type": "text"
+    },
+    "structuredData": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

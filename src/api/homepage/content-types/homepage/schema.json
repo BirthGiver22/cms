@@ -22,6 +22,11 @@
         "homepage.collaborations",
         "homepage.ready-to-get-started"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

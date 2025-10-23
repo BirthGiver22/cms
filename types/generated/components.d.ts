@@ -384,6 +384,39 @@ export interface SharedHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedOpenGraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_open_graphs';
+  info: {
+    displayName: 'OpenGraph';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    socialNetworks: Schema.Attribute.Enumeration<
+      ['Instagram', 'LinkedIn', 'TikTok']
+    >;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'seo';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.Text;
+    keywords: Schema.Attribute.Text;
+    metaDescription: Schema.Attribute.Text;
+    metaImage: Schema.Attribute.Text;
+    metaRobots: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    metaViewport: Schema.Attribute.Text;
+    socialNetwork: Schema.Attribute.Component<'shared.open-graph', true>;
+    structuredData: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedTags extends Struct.ComponentSchema {
   collectionName: 'components_shared_tags';
   info: {
@@ -426,6 +459,8 @@ declare module '@strapi/strapi' {
       'shared.footer': SharedFooter;
       'shared.header': SharedHeader;
       'shared.hero-section': SharedHeroSection;
+      'shared.open-graph': SharedOpenGraph;
+      'shared.seo': SharedSeo;
       'shared.tags': SharedTags;
     }
   }

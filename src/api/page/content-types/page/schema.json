@@ -29,6 +29,11 @@
         "blocks.projects",
         "blocks.careers"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
