@@ -390,6 +390,7 @@ export interface SharedFooter extends Struct.ComponentSchema {
     company: Schema.Attribute.Component<'elements.link', true>;
     description: Schema.Attribute.Text;
     loop: Schema.Attribute.Component<'footer.stay-in-the-loop', false>;
+    rights: Schema.Attribute.Text;
     services: Schema.Attribute.Component<'elements.link', true>;
     socials: Schema.Attribute.Component<'elements.link', true>;
     title: Schema.Attribute.Text;

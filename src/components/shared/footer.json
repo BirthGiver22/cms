@@ -35,6 +35,9 @@
       "type": "component",
       "component": "footer.stay-in-the-loop",
       "repeatable": false
+    },
+    "rights": {
+      "type": "text"
     }
   },
   "config": {}
