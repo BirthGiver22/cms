@@ -218,6 +218,18 @@ export interface ElementsTetimonials extends Struct.ComponentSchema {
   };
 }
 
+export interface FooterStayInTheLoop extends Struct.ComponentSchema {
+  collectionName: 'components_footer_stay_in_the_loops';
+  info: {
+    displayName: 'Stay in the loop';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface HomepageCollaborations extends Struct.ComponentSchema {
   collectionName: 'components_homepage_collaborations';
   info: {
@@ -331,6 +343,22 @@ export interface SharedCta extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFooter extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    company: Schema.Attribute.Component<'elements.link', true>;
+    description: Schema.Attribute.Text;
+    loop: Schema.Attribute.Component<'footer.stay-in-the-loop', false>;
+    services: Schema.Attribute.Component<'elements.link', true>;
+    socials: Schema.Attribute.Component<'elements.link', true>;
+    title: Schema.Attribute.Text;
+    workWith: Schema.Attribute.Component<'elements.link', true>;
+  };
+}
+
 export interface SharedHeader extends Struct.ComponentSchema {
   collectionName: 'components_shared_headers';
   info: {
@@ -386,6 +414,7 @@ declare module '@strapi/strapi' {
       'elements.link': ElementsLink;
       'elements.numbers': ElementsNumbers;
       'elements.tetimonials': ElementsTetimonials;
+      'footer.stay-in-the-loop': FooterStayInTheLoop;
       'homepage.collaborations': HomepageCollaborations;
       'homepage.other-services': HomepageOtherServices;
       'homepage.ready-to-get-started': HomepageReadyToGetStarted;
@@ -394,6 +423,7 @@ declare module '@strapi/strapi' {
       'homepage.testimonials': HomepageTestimonials;
       'servicepage.services': ServicepageServices;
       'shared.cta': SharedCta;
+      'shared.footer': SharedFooter;
       'shared.header': SharedHeader;
       'shared.hero-section': SharedHeroSection;
       'shared.tags': SharedTags;

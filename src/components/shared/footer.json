@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "socials": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "services": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "company": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "workWith": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "loop": {
+      "type": "component",
+      "component": "footer.stay-in-the-loop",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

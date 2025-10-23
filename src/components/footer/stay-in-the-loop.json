@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_stay_in_the_loops",
+  "info": {
+    "displayName": "Stay in the loop"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
