@@ -191,6 +191,7 @@ export interface ElementsCard extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
     link: Schema.Attribute.Component<'elements.link', false>;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     title: Schema.Attribute.Text;
   };
 }
@@ -364,6 +365,7 @@ export interface ServicepageServices extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     href: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     subServices: Schema.Attribute.Component<'elements.card', true>;
     title: Schema.Attribute.Text;
   };
