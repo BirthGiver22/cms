@@ -8,10 +8,14 @@
     "metaTitle": {
       "type": "text"
     },
-    "metaDescription": {
-      "type": "text"
-    },
     "metaImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "metaDescription": {
       "type": "text"
     },
     "socialNetwork": {
